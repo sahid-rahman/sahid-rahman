@@ -8,8 +8,7 @@ Welcome to my GitHub portfolio! I’m Sahid, a passionate learner and aspiring *
 
 - 🎓 *Civil Engineering Student* at [Your University Name].
 - 🛡️ 1.5 years of experience as a *Bug Bounty Hunter*, successfully identifying valid bugs like *XSS* and *CSRF*.
-- 🌐 Strong foundation in *HTML*, *CSS*, *JavaScript*, *Python*, and *Bash*.
-- ☁️ Currently transitioning to *Cloud Security Engineering* while enhancing my *SOC (Security Operations Center)* skills.
+- 🌐 Strong foundation in *HTML*,*JavaScript*, *Python*, and *Bash*.
 - 📚 Dedicated to learning *Data Structures and Algorithms (DSA)* for software development roles.
 - 🎥 Exploring *video editing* to start a *gaming YouTube channel* in Bangla-English.
 
@@ -17,10 +16,8 @@ Welcome to my GitHub portfolio! I’m Sahid, a passionate learner and aspiring *
 
 ## 🎯 Goals
 
-- Secure a *cybersecurity job* by *March 14, 2025*.
-- Transition into a *Cloud Security Engineer* role within 3 months.
+- Secure a *cybersecurity job* by  2025*.
 - Build a financially stable and future-proof career in the tech industry.
-- Balance university studies with professional growth.
 
 ---
 
