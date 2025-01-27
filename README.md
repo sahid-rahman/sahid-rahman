@@ -1,13 +1,13 @@
 # Sahid's Portfolio 🚀
 
-Welcome to my GitHub portfolio! I’m Shahid, a passionate learner and aspiring *Cloud Security Engineer* with a strong background in *cybersecurity* and a keen interest in *technology* and *personal growth*. This portfolio highlights my journey, skills, and projects as I strive to establish a secure, future-proof career.
+Welcome to my GitHub portfolio! I’m Sahid, a passionate learner and aspiring *Cloud Security Engineer* with a strong background in *cybersecurity* and a keen interest in *technology* and *personal growth*. This portfolio highlights my journey, skills, and projects as I strive to establish a secure, future-proof career.
 
 ---
 
 ## 🌟 About Me
 
 - 🎓 *Civil Engineering Student* at [Your University Name].
-- 🛡️ 1.5 years of experience as a *Bug Bounty Hunter*, successfully identifying valid bugs like *XSS* and *SQL Injection*.
+- 🛡️ 1.5 years of experience as a *Bug Bounty Hunter*, successfully identifying valid bugs like *XSS* and *CSRF*.
 - 🌐 Strong foundation in *HTML*, *CSS*, *JavaScript*, *Python*, and *Bash*.
 - ☁️ Currently transitioning to *Cloud Security Engineering* while enhancing my *SOC (Security Operations Center)* skills.
 - 📚 Dedicated to learning *Data Structures and Algorithms (DSA)* for software development roles.
@@ -37,32 +37,19 @@ Welcome to my GitHub portfolio! I’m Shahid, a passionate learner and aspiring 
 ## 📂 Projects
 
 ### 🔒 Cybersecurity Projects
-- *Bug Bounty Work*: Found valid XSS vulnerabilities and SQL Injection bugs on HackerOne.  
+- *Bug Bounty Work*: Found Couple of  valid  vulnerabilities like XSS and CSRF Injection bugs on HackerOne.  
 - *[Your SOC-related project, if any]*  
 
-### 💻 Full-Stack Development
-- *[Capstone Project Name]*: A full-stack application using React.js, Node.js, and Express.js.  
-- *[Other notable projects]*
 
 ### 🎮 Content Creation
 - *YouTube Channel* (In Progress): Bangla-English gaming content.  
 
 ---
 
-## 📈 Learning Path
-
-- *Daily Routine*:  
-  - *4 hours/day*: Full-stack development, SOC skills, and cybersecurity concepts.  
-  - *1 hour/day*: Video editing.  
-- *Certifications* (Planned):  
-  - AWS Certified Security – Specialty  
-  - Microsoft Azure Security Engineer Associate  
-
----
 
 ## 📞 Contact Me
 
-- *Email*: [Your Email Address]  
+- *Email*: [sahidrahmanx@gmail.com]  
 - *LinkedIn*: [Your LinkedIn Profile]  
 - *GitHub*: [Your GitHub Profile Link]  
 - *Portfolio Website*: [Your Portfolio Link, if available]  
