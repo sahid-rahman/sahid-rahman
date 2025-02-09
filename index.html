@@ -5,124 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sahid | World's Top 1% Cybersecurity Expert</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
     <style>
         :root {
             --bg-color: #0A192F;
             --primary-color: #64FFDA;
             --accent-color: #FF6B6B;
             --text-color: #CCD6F6;
-            --card-bg: #112240;
-            --border-color: #233554;
-            --hover-bg: #1F4068;
-            --highlight: rgba(100,255,218,0.1);
-            --glow: 0 0 20px rgba(100,255,218,0.5);
         }
-        
+
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', 'Segoe UI', sans-serif;
             margin: 0;
             overflow-x: hidden;
         }
-        
-        #particles-js {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: -1;
-        }
-        
+
         .hero {
             text-align: center;
             padding: 10rem 2rem;
             position: relative;
+            overflow: hidden;
         }
-        
+
         .hero h1 {
             font-size: 4rem;
             color: var(--primary-color);
         }
-        
+
         .hero p {
             font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
         }
-        
-        .buttons {
+
+        .cta-button {
             margin-top: 2rem;
-        }
-        
-        .cta-button, .resume-button {
             padding: 1rem 2rem;
+            background: var(--primary-color);
+            color: var(--bg-color);
             border: none;
             border-radius: 4px;
             font-size: 1.2rem;
             cursor: pointer;
-            transition: all 0.3s ease;
-            margin: 0.5rem;
         }
-        
-        .cta-button {
-            background: var(--primary-color);
-            color: var(--bg-color);
-        }
-        
-        .resume-button {
+
+        .cta-button:hover {
             background: var(--accent-color);
-            color: var(--bg-color);
         }
-        
+
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 2.5rem;
+            gap: 2rem;
             margin: 2rem 0;
         }
-        
+
         .social-links a {
             font-size: 2rem;
             color: var(--text-color);
-            transition: color 0.3s ease;
         }
-        
+
         .social-links a:hover {
             color: var(--primary-color);
-            text-shadow: var(--glow);
         }
     </style>
 </head>
 <body>
-    <div id="particles-js"></div>
-    
-    <section class="hero">
+    <div id="background-effect"></div>
+    <section class="hero" id="home">
         <h1>SAHID</h1>
-        <p>TOP 1% CYBERSECURITY RESEARCHER • GOOGLE CYBERSECURITY SPECIALIST</p>
-        <div class="buttons">
-            <button class="cta-button">Hire Me</button>
-            <a href="resume.pdf" download><button class="resume-button">Download Resume</button></a>
-        </div>
+        <p>TOP 1% CYBERSECURITY RESEARCHER • GOOGLE CYBERSECURITY SPECIALIST • BUG BOUNTY LEADER</p>
+        <button class="cta-button">Download Resume</button>
     </section>
-    
-    <footer>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fas fa-bug"></i></a>
-            <a href="#"><i class="fas fa-envelope"></i></a>
-        </div>
-    </footer>
-    
+
+    <div class="social-links">
+        <a href="mailto:sahid@cyber.pro"><i class="fas fa-envelope"></i></a>
+        <a href="https://linkedin.com/in/sahid"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/sahid"><i class="fab fa-github"></i></a>
+        <a href="https://hackerone.com/sahid"><i class="fas fa-bug"></i></a>
+    </div>
+
     <script>
-        particlesJS("particles-js", {
-            "particles": {
-                "number": { "value": 80 },
-                "size": { "value": 3 },
-                "move": { "speed": 2 },
-                "line_linked": { "enable": true, "distance": 150 }
-            }
+        VANTA.NET({
+            el: "#background-effect",
+            color: 0x64FFDA,
+            backgroundColor: 0x0A192F,
+            points: 10.0,
+            maxDistance: 25.0,
+            spacing: 15.0,
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false
         });
     </script>
 </body>
