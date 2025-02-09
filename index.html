@@ -5,328 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sahid | World's Top 1% Cybersecurity Expert</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
     <style>
-        /* 2025 Ultra-Modern Color Palette */
         :root {
-            --bg-color: #0A192F; /* Deep Navy */
-            --primary-color: #64FFDA; /* Cyber Teal */
-            --accent-color: #FF6B6B; /* Coral Red */
-            --text-color: #CCD6F6; /* Soft White */
-            --card-bg: #112240; /* Dark Navy */
-            --border-color: #233554; /* Medium Navy */
-            --hover-bg: #1F4068; /* Hover Blue */
-            --highlight: rgba(100,255,218,0.1); /* Teal Highlight */
-            --glow: 0 0 20px rgba(100,255,218,0.5); /* Neon Glow */
+            --bg-color: #0A192F;
+            --primary-color: #64FFDA;
+            --accent-color: #FF6B6B;
+            --text-color: #CCD6F6;
+            --card-bg: #112240;
+            --border-color: #233554;
+            --hover-bg: #1F4068;
+            --highlight: rgba(100,255,218,0.1);
+            --glow: 0 0 20px rgba(100,255,218,0.5);
         }
-
-        /* Smooth Scroll and Global Styles */
-        html {
-            scroll-behavior: smooth;
-        }
-
+        
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
-            font-family: 'Inter', 'Segoe UI', sans-serif;
-            line-height: 1.6;
+            font-family: 'Inter', sans-serif;
             margin: 0;
             overflow-x: hidden;
         }
-
-        /* Navbar with Glass Morphism */
-        .navbar {
-            background: rgba(17, 34, 64, 0.8); /* Semi-transparent */
-            padding: 1rem;
-            position: sticky;
+        
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
             top: 0;
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            border-bottom: 1px solid var(--border-color);
+            left: 0;
+            z-index: -1;
         }
-
-        .navbar ul {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            flex-wrap: wrap;
-        }
-
-        .navbar a {
-            color: var(--text-color);
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-
-        .navbar a:hover {
-            background: var(--highlight);
-            color: var(--primary-color);
-            box-shadow: var(--glow);
-        }
-
-        /* Hero Section with Animated Gradient */
+        
         .hero {
             text-align: center;
             padding: 10rem 2rem;
-            background: linear-gradient(135deg, var(--bg-color) 30%, var(--hover-bg));
             position: relative;
-            overflow: hidden;
         }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(100,255,218,0.1) 10%, transparent 50%);
-            animation: rotate 20s linear infinite;
-            z-index: -1;
-        }
-
-        @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
+        
         .hero h1 {
             font-size: 4rem;
             color: var(--primary-color);
-            margin-bottom: 1rem;
-            text-shadow: var(--glow);
         }
-
+        
         .hero p {
             font-size: 1.5rem;
-            max-width: 800px;
-            margin: 0 auto;
-            color: var(--text-color);
         }
-
-        .hero .cta-button {
+        
+        .buttons {
             margin-top: 2rem;
+        }
+        
+        .cta-button, .resume-button {
             padding: 1rem 2rem;
-            background: var(--primary-color);
-            color: var(--bg-color);
             border: none;
             border-radius: 4px;
             font-size: 1.2rem;
             cursor: pointer;
             transition: all 0.3s ease;
+            margin: 0.5rem;
         }
-
-        .hero .cta-button:hover {
-            background: var(--accent-color);
-            box-shadow: var(--glow);
-        }
-
-        /* Section Titles with Animated Underline */
-        .section-title {
-            text-align: center;
-            color: var(--primary-color);
-            font-size: 2.5rem;
-            margin: 4rem 0 2rem;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            width: 60px;
-            height: 2px;
+        
+        .cta-button {
             background: var(--primary-color);
-            display: block;
-            margin: 0.5rem auto;
-            animation: underline 2s infinite;
+            color: var(--bg-color);
         }
-
-        @keyframes underline {
-            0% { width: 0; }
-            50% { width: 60px; }
-            100% { width: 0; }
+        
+        .resume-button {
+            background: var(--accent-color);
+            color: var(--bg-color);
         }
-
-        /* Card Grid with 3D Hover Effect */
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            padding: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .card {
-            background: var(--card-bg);
-            padding: 2rem;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(100,255,218,0.1) 10%, transparent 50%);
-            animation: rotate 20s linear infinite;
-            z-index: -1;
-        }
-
-        .card:hover {
-            transform: translateY(-10px) scale(1.05);
-            box-shadow: var(--glow);
-            border-color: var(--primary-color);
-        }
-
-        /* Certifications Section with Badges */
-        .cert-badge {
-            display: inline-block;
-            background: var(--highlight);
-            color: var(--primary-color);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            margin: 0.5rem 0;
-            font-size: 0.9rem;
-            box-shadow: var(--glow);
-        }
-
-        /* Footer with Gradient Background */
-        footer {
-            background: linear-gradient(135deg, var(--card-bg), var(--bg-color));
-            text-align: center;
-            padding: 3rem 2rem;
-            margin-top: 4rem;
-            border-top: 1px solid var(--border-color);
-        }
-
+        
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            gap: 2.5rem;
             margin: 2rem 0;
         }
-
+        
         .social-links a {
-            font-size: 1.5rem;
+            font-size: 2rem;
             color: var(--text-color);
             transition: color 0.3s ease;
         }
-
+        
         .social-links a:hover {
             color: var(--primary-color);
             text-shadow: var(--glow);
         }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero p {
-                font-size: 1.2rem;
-            }
-
-            .navbar ul {
-                gap: 1rem;
-            }
-
-            .card-grid {
-                grid-template-columns: 1fr;
-                padding: 1rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero {
-                padding: 6rem 1rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-        }
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#certifications">Certs</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <section class="hero" id="home">
+    <div id="particles-js"></div>
+    
+    <section class="hero">
         <h1>SAHID</h1>
-        <p>TOP 1% CYBERSECURITY RESEARCHER • GOOGLE CYBERSECURITY SPECIALIST • BUG BOUNTY LEADER</p>
-        <button class="cta-button">Hire Me</button>
-    </section>
-
-    <section id="skills">
-        <h2 class="section-title">Core Expertise</h2>
-        <div class="card-grid">
-            <div class="card">
-                <h3><i class="fas fa-shield-alt"></i> Threat Intelligence</h3>
-                <p>Advanced persistent threat detection and analysis with 99.8% accuracy rate</p>
-            </div>
-            <div class="card">
-                <h3><i class="fas fa-bug"></i> Ethical Hacking</h3>
-                <p>500+ critical vulnerabilities discovered in enterprise systems</p>
-            </div>
-            <div class="card">
-                <h3><i class="fas fa-cloud"></i> Cloud Security</h3>
-                <p>Multi-cloud security architecture design & implementation</p>
-            </div>
+        <p>TOP 1% CYBERSECURITY RESEARCHER • GOOGLE CYBERSECURITY SPECIALIST</p>
+        <div class="buttons">
+            <button class="cta-button">Hire Me</button>
+            <a href="resume.pdf" download><button class="resume-button">Download Resume</button></a>
         </div>
     </section>
-
-    <section id="certifications">
-        <h2 class="section-title">Certifications</h2>
-        <div class="card-grid">
-            <div class="card">
-                <div class="cert-badge">Google</div>
-                <h3>Cybersecurity Professional</h3>
-                <p>Advanced threat detection and SOC operations</p>
-            </div>
-            <div class="card">
-                <div class="cert-badge">FreeCodeCamp</div>
-                <h3>Security Engineering</h3>
-                <p>Full stack security implementation</p>
-            </div>
-            <div class="card">
-                <div class="cert-badge">Cisco</div>
-                <h3>CyberOps Associate</h3>
-                <p>Network security monitoring</p>
-            </div>
-            <div class="card">
-                <div class="cert-badge">IBM</div>
-                <h3>Cybersecurity Analyst</h3>
-                <p>Enterprise security solutions</p>
-            </div>
-        </div>
-    </section>
-
-    <footer id="contact">
+    
+    <footer>
         <div class="social-links">
-            <a href="mailto:sahid@cyber.pro"><i class="fas fa-envelope"></i></a>
-            <a href="https://linkedin.com/in/sahid"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/sahid"><i class="fab fa-github"></i></a>
-            <a href="https://hackerone.com/sahid"><i class="fas fa-bug"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fas fa-bug"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
         </div>
-        <p>© 2025 SAHID - LEADING CYBER DEFENSE INNOVATION</p>
     </footer>
+    
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 80 },
+                "size": { "value": 3 },
+                "move": { "speed": 2 },
+                "line_linked": { "enable": true, "distance": 150 }
+            }
+        });
+    </script>
 </body>
 </html>
