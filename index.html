@@ -5,28 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sahid | World's Top 1% Cybersecurity Expert</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
     <style>
+        /* 2025 Ultra-Modern Color Palette */
         :root {
-            --bg-color: #0A192F;
-            --primary-color: #64FFDA;
-            --accent-color: #FF6B6B;
-            --text-color: #CCD6F6;
-            --card-bg: #112240;
-            --border-color: #233554;
+            --bg-color: #0A192F; /* Deep Navy */
+            --primary-color: #64FFDA; /* Cyber Teal */
+            --accent-color: #FF6B6B; /* Coral Red */
+            --text-color: #CCD6F6; /* Soft White */
+            --card-bg: #112240; /* Dark Navy */
+            --border-color: #233554; /* Medium Navy */
+            --hover-bg: #1F4068; /* Hover Blue */
+            --highlight: rgba(100,255,218,0.1); /* Teal Highlight */
+            --glow: 0 0 20px rgba(100,255,218,0.5); /* Neon Glow */
+        }
+
+        /* Smooth Scroll and Global Styles */
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
             font-family: 'Inter', 'Segoe UI', sans-serif;
+            line-height: 1.6;
             margin: 0;
             overflow-x: hidden;
         }
 
+        /* Hacking Background Animation */
+        .hacking-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .hacking-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(100,255,218,0.1) 10%, transparent 50%);
+            animation: rotate 20s linear infinite;
+        }
+
+        .hacking-background span {
+            position: absolute;
+            color: var(--primary-color);
+            font-family: 'Courier New', monospace;
+            font-size: 1.2rem;
+            opacity: 0.7;
+            animation: fall linear infinite;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100vh); }
+        }
+
+        /* Navbar with Glass Morphism */
         .navbar {
-            background: rgba(17, 34, 64, 0.8);
+            background: rgba(17, 34, 64, 0.8); /* Semi-transparent */
             padding: 1rem;
             position: sticky;
             top: 0;
@@ -54,10 +104,12 @@
         }
 
         .navbar a:hover {
-            background: rgba(100,255,218,0.1);
+            background: var(--highlight);
             color: var(--primary-color);
+            box-shadow: var(--glow);
         }
 
+        /* Hero Section */
         .hero {
             text-align: center;
             padding: 10rem 2rem;
@@ -68,15 +120,18 @@
         .hero h1 {
             font-size: 4rem;
             color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-shadow: var(--glow);
         }
 
         .hero p {
             font-size: 1.5rem;
             max-width: 800px;
             margin: 0 auto;
+            color: var(--text-color);
         }
 
-        .cta-button {
+        .hero .cta-button {
             margin-top: 2rem;
             padding: 1rem 2rem;
             background: var(--primary-color);
@@ -85,12 +140,40 @@
             border-radius: 4px;
             font-size: 1.2rem;
             cursor: pointer;
+            transition: all 0.3s ease;
         }
 
-        .cta-button:hover {
+        .hero .cta-button:hover {
             background: var(--accent-color);
+            box-shadow: var(--glow);
         }
 
+        /* Section Titles with Animated Underline */
+        .section-title {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin: 4rem 0 2rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 2px;
+            background: var(--primary-color);
+            display: block;
+            margin: 0.5rem auto;
+            animation: underline 2s infinite;
+        }
+
+        @keyframes underline {
+            0% { width: 0; }
+            50% { width: 60px; }
+            100% { width: 0; }
+        }
+
+        /* Card Grid with 3D Hover Effect */
         .card-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -112,7 +195,29 @@
 
         .card:hover {
             transform: translateY(-10px) scale(1.05);
-            box-shadow: 0 0 20px rgba(100,255,218,0.5);
+            box-shadow: var(--glow);
+            border-color: var(--primary-color);
+        }
+
+        /* Certifications Section with Badges */
+        .cert-badge {
+            display: inline-block;
+            background: var(--highlight);
+            color: var(--primary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+            box-shadow: var(--glow);
+        }
+
+        /* Footer with Gradient Background */
+        footer {
+            background: linear-gradient(135deg, var(--card-bg), var(--bg-color));
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+            border-top: 1px solid var(--border-color);
         }
 
         .social-links {
@@ -123,22 +228,58 @@
         }
 
         .social-links a {
-            font-size: 2rem;
+            font-size: 1.5rem;
             color: var(--text-color);
+            transition: color 0.3s ease;
         }
 
         .social-links a:hover {
             color: var(--primary-color);
+            text-shadow: var(--glow);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .navbar ul {
+                gap: 1rem;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 6rem 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div id="background-effect"></div>
+    <!-- Hacking Background -->
+    <div class="hacking-background">
+        <!-- JavaScript will dynamically add falling text here -->
+    </div>
+
     <nav class="navbar">
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#certifications">Certs</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -147,7 +288,7 @@
     <section class="hero" id="home">
         <h1>SAHID</h1>
         <p>TOP 1% CYBERSECURITY RESEARCHER • GOOGLE CYBERSECURITY SPECIALIST • BUG BOUNTY LEADER</p>
-        <button class="cta-button">Download Resume</button>
+        <button class="cta-button">Hire Me</button>
     </section>
 
     <section id="skills">
@@ -168,25 +309,68 @@
         </div>
     </section>
 
-    <div class="social-links">
-        <a href="mailto:sahid@cyber.pro"><i class="fas fa-envelope"></i></a>
-        <a href="https://linkedin.com/in/sahid"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/sahid"><i class="fab fa-github"></i></a>
-        <a href="https://hackerone.com/sahid"><i class="fas fa-bug"></i></a>
-    </div>
+    <section id="certifications">
+        <h2 class="section-title">Certifications</h2>
+        <div class="card-grid">
+            <div class="card">
+                <div class="cert-badge">Google</div>
+                <h3>Cybersecurity Professional</h3>
+                <p>Advanced threat detection and SOC operations</p>
+            </div>
+            <div class="card">
+                <div class="cert-badge">FreeCodeCamp</div>
+                <h3>Security Engineering</h3>
+                <p>Full stack security implementation</p>
+            </div>
+            <div class="card">
+                <div class="cert-badge">Cisco</div>
+                <h3>CyberOps Associate</h3>
+                <p>Network security monitoring</p>
+            </div>
+            <div class="card">
+                <div class="cert-badge">IBM</div>
+                <h3>Cybersecurity Analyst</h3>
+                <p>Enterprise security solutions</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="social-links">
+            <a href="mailto:sahid@cyber.pro"><i class="fas fa-envelope"></i></a>
+            <a href="https://linkedin.com/in/sahid"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/sahid"><i class="fab fa-github"></i></a>
+            <a href="https://hackerone.com/sahid"><i class="fas fa-bug"></i></a>
+        </div>
+        <p>© 2025 SAHID - LEADING CYBER DEFENSE INNOVATION</p>
+    </footer>
 
     <script>
-        VANTA.NET({
-            el: "#background-effect",
-            color: 0x64FFDA,
-            backgroundColor: 0x0A192F,
-            points: 10.0,
-            maxDistance: 25.0,
-            spacing: 15.0,
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false
-        });
+        // JavaScript for Hacking Background
+        const hackingBackground = document.querySelector('.hacking-background');
+
+        function createFallingText() {
+            const text = document.createElement('span');
+            text.textContent = generateRandomText();
+            text.style.left = Math.random() * 100 + 'vw';
+            text.style.animationDuration = Math.random() * 5 + 3 + 's';
+            hackingBackground.appendChild(text);
+
+            setTimeout(() => {
+                text.remove();
+            }, 8000); // Remove text after animation ends
+        }
+
+        function generateRandomText() {
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()';
+            let result = '';
+            for (let i = 0; i < 10; i++) {
+                result += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+            return result;
+        }
+
+        setInterval(createFallingText, 500); // Add new text every 500ms
     </script>
 </body>
 </html>
