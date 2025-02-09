@@ -6,36 +6,36 @@
     <title>Shahid | Cybersecurity Specialist</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        /* Custom Color Palette */
         :root {
-            --dark-background: #0b0f13; /* Dark background */
-            --neon-green: #00ff00; /* Neon Green */
-            --bright-cyan: #00ffff; /* Bright Cyan */
-            --neon-lime: #39ff14; /* Neon Lime Green */
-            --purple: #9b59b6; /* Purple */
-            --red: #e74c3c; /* Red */
-            --yellow: #f39c12; /* Yellow */
-            --light-gray: #ecf0f1; /* Light Gray text */
+            --bg-color: #121212; /* Dark Background */
+            --primary-color: #1ab54c; /* Subtle Green */
+            --accent-color: #00bcd4; /* Cyan Accent */
+            --highlight-color: #ff4081; /* Pink for highlights */
+            --text-color: #f4f4f4; /* Light Text */
+            --light-background: #1d1d1d; /* Light Background for cards */
+            --border-color: #444444; /* Subtle borders */
+            --hover-bg: #333333; /* Hover background */
         }
 
         body {
-            background-color: var(--dark-background);
-            color: var(--light-gray);
+            background-color: var(--bg-color);
+            color: var(--text-color);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            margin: 0;
         }
 
         a {
-            color: var(--neon-green);
+            color: var(--primary-color);
             text-decoration: none;
-            font-weight: bold;
         }
 
         a:hover {
-            color: var(--bright-cyan);
+            color: var(--accent-color);
         }
 
         .navbar {
-            background-color: #1e1e1e;
+            background-color: var(--light-background);
             padding: 1rem;
             position: sticky;
             top: 0;
@@ -45,10 +45,12 @@
             display: flex;
             justify-content: center;
             list-style: none;
+            padding: 0;
+            margin: 0;
         }
 
         .navbar a {
-            color: var(--light-gray);
+            color: var(--text-color);
             text-decoration: none;
             padding: 1rem;
             transition: color 0.3s;
@@ -63,91 +65,82 @@
             padding: 5rem 2rem;
             background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('hacker-background.jpg');
             background-size: cover;
-            color: var(--light-gray);
+            color: var(--text-color);
         }
 
-        .skills-container {
+        .hero h1 {
+            color: var(--highlight-color);
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .skills-container, .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             padding: 2rem;
         }
 
         .card {
-            background: #1e1e1e;
+            background-color: var(--light-background);
             padding: 1.5rem;
             border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            transition: transform 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            transition: background-color 0.3s;
         }
 
         .card:hover {
+            background-color: var(--hover-bg);
             transform: scale(1.05);
-            background-color: var(--neon-green);
         }
 
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
+        .blog-card {
+            background-color: var(--light-background);
+            border-radius: 5px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+        }
+
+        .blog-card:hover {
+            background-color: var(--accent-color);
+            transform: scale(1.05);
+        }
+
+        .experience-section, .certifications-section {
             padding: 2rem;
         }
 
-        .projects-grid .card {
-            background-color: #34495e;
-        }
-
-        .certifications {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
+        .projects-section, .certifications-section {
             padding: 2rem;
+            background-color: var(--bg-color);
         }
 
         footer {
-            background-color: #1e1e1e;
-            color: var(--light-gray);
+            background-color: var(--light-background);
+            color: var(--text-color);
             text-align: center;
             padding: 2rem;
         }
 
         footer a {
-            color: var(--light-gray);
+            color: var(--text-color);
             text-decoration: none;
-            padding: 0.5rem;
         }
 
         footer a:hover {
-            color: var(--neon-green);
+            color: var(--accent-color);
         }
 
-        .experience-section {
-            padding: 2rem;
-        }
-
-        .experience-section h2 {
-            color: var(--neon-lime);
-            margin-bottom: 1rem;
-        }
-
-        .blog-card {
-            background-color: #34495e;
-            border-radius: 5px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            transition: transform 0.3s;
-        }
-
-        .blog-card:hover {
-            transform: scale(1.05);
-            background-color: var(--neon-green);
-        }
-
+        /* Responsive Design */
         @media (max-width: 768px) {
             .navbar ul {
                 flex-direction: column;
-                text-align: center;
             }
         }
     </style>
@@ -159,6 +152,7 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#certifications">Certifications</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -166,81 +160,73 @@
 
     <section class="hero" id="home">
         <h1>Shahid</h1>
-        <p>Cybersecurity Enthusiast | Ethical Hacker | Cloud Security Specialist</p>
-        <div style="margin-top: 2rem;">
-            <a href="resume.pdf" class="btn" style="color: #16a085; background-color: #34495e; padding: 1rem 2rem; border-radius: 5px; text-decoration: none; font-weight: bold;">Download Resume</a>
-        </div>
+        <p>Cybersecurity Specialist | Penetration Tester | SOC Analyst | Bug Bounty Hunter</p>
     </section>
 
     <section id="skills">
-        <h2 style="color: var(--neon-lime);">Technical Skills</h2>
+        <h2 class="section-title">Technical Skills</h2>
         <div class="skills-container">
             <div class="card">
-                <h3><i class="fas fa-shield-alt"></i> Defense</h3>
-                <ul>
-                    <li>SIEM Implementation</li>
-                    <li>Firewall Configuration</li>
-                    <li>Incident Response</li>
-                </ul>
+                <h3><i class="fas fa-shield-alt"></i> Cybersecurity Analyst</h3>
+                <p>Strong expertise in threat analysis, vulnerability assessments, and incident response management. Skilled in identifying weaknesses and improving system security.</p>
             </div>
             <div class="card">
-                <h3><i class="fas fa-bug"></i> Offense</h3>
-                <ul>
-                    <li>Penetration Testing</li>
-                    <li>Vulnerability Assessment</li>
-                    <li>OWASP Top 10</li>
-                </ul>
+                <h3><i class="fas fa-bug"></i> Penetration Tester</h3>
+                <p>Experienced in conducting security audits, ethical hacking, and penetration testing on web applications, networks, and systems.</p>
             </div>
             <div class="card">
-                <h3><i class="fas fa-tools"></i> Tools</h3>
-                <ul>
-                    <li>Nmap | Metasploit</li>
-                    <li>Wireshark | Burp Suite</li>
-                    <li>Kali Linux</li>
-                </ul>
+                <h3><i class="fas fa-network-wired"></i> SOC Analyst</h3>
+                <p>Proficient in Security Operations Center (SOC) tasks including monitoring, triaging incidents, and analyzing security logs to detect and respond to threats in real time.</p>
             </div>
         </div>
     </section>
 
     <section id="experience" class="experience-section">
-        <h2>Experience</h2>
+        <h2 class="section-title">Experience</h2>
         <div class="blog-card">
-            <h3>Bug Bounty Hunter</h3>
-            <p>As a bug bounty hunter, I have participated in various platforms like HackerOne and Bugcrowd, identifying critical vulnerabilities in live applications and systems.</p>
-            <a href="https://example.com/bug-bounty-blog" target="_blank" style="color: var(--neon-green);">Read my Blog on Bug Bounty Hunting</a>
+            <h3>Bug Bounty Hunter - 1.5 Years</h3>
+            <p>I've spent over 1.5 years participating in bug bounty programs, identifying critical vulnerabilities in live applications. Platforms like HackerOne and Bugcrowd have been key in honing my skills.</p>
+            <a href="https://yourbugbountydetailslink.com" target="_blank">Read more about my Bug Bounty journey</a>
         </div>
     </section>
 
-    <section id="projects">
-        <h2>Recent Projects</h2>
+    <section id="projects" class="projects-section">
+        <h2 class="section-title">Projects</h2>
         <div class="projects-grid">
             <div class="card">
-                <h3>Network Vulnerability Assessment</h3>
-                <p>Conducted a full security audit for a medium-sized enterprise, including penetration testing and security policy development.</p>
+                <h3>Network Security Enhancement</h3>
+                <p>Led a project that enhanced the network security of a client by implementing robust security measures such as firewalls, encryption, and intrusion detection systems (IDS).</p>
             </div>
             <div class="card">
-                <h3>CTF Competitions</h3>
-                <p>Regular participant in HackTheBox and TryHackMe challenges. Ranked in the top 10% in National Cyber League.</p>
+                <h3>Web Application Penetration Testing</h3>
+                <p>Conducted a comprehensive penetration test on a web application, discovering vulnerabilities and providing detailed remediation strategies.</p>
             </div>
         </div>
     </section>
 
-    <section id="certifications" class="certifications">
-        <h2>Certifications</h2>
-        <img src="comptia-sec+.png" alt="Security+" height="100">
-        <img src="ceh.png" alt="CEH" height="100">
-        <img src="oscp.png" alt="OSCP" height="100">
-        <img src="google-cybersecurity.png" alt="Google Cybersecurity Professional" height="100">
+    <section id="certifications" class="certifications-section">
+        <h2 class="section-title">Certifications</h2>
+        <div class="projects-grid">
+            <div class="card">
+                <h3>Google Cybersecurity Professional Certificate</h3>
+                <p>Completed the Google Cybersecurity Professional Certificate, acquiring foundational knowledge in security analysis, network security, and incident response.</p>
+            </div>
+            <div class="card">
+                <h3>CompTIA Security+</h3>
+                <p>Earned the CompTIA Security+ certification, solidifying my knowledge in cybersecurity fundamentals, including network security and threat management.</p>
+            </div>
+        </div>
     </section>
 
     <footer id="contact">
-        <h3>Let's Connect</h3>
+        <h3>Connect with Me</h3>
         <p>
             <a href="mailto:shahid@cybersec.com"><i class="fas fa-envelope"></i></a>
-            <a href="https://linkedin.com/in/shahid"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/shahid"><i class="fab fa-linkedin"></i></a>
             <a href="https://github.com/shahid"><i class="fab fa-github"></i></a>
         </p>
-        <p>© 2023 Shahid. All rights reserved.</p>
+        <p>© 2025 Shahid. All rights reserved.</p>
     </footer>
+
 </body>
 </html>
