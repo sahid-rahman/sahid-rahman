@@ -62,6 +62,7 @@
             font-size: 1.2rem;
             opacity: 0.7;
             animation: fall linear infinite;
+            user-select: none;
         }
 
         @keyframes rotate {
@@ -72,6 +73,34 @@
         @keyframes fall {
             0% { transform: translateY(-100%); }
             100% { transform: translateY(100vh); }
+        }
+
+        /* Hacker Intrusion Simulation */
+        .hacker-intrusion {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .hacker-intrusion .intrusion-text {
+            position: absolute;
+            color: var(--accent-color);
+            font-family: 'Courier New', monospace;
+            font-size: 1.5rem;
+            opacity: 0;
+            animation: intrusion 5s linear infinite;
+        }
+
+        @keyframes intrusion {
+            0% { opacity: 0; transform: translateY(-100%); }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { opacity: 0; transform: translateY(100vh); }
         }
 
         /* Navbar with Glass Morphism */
@@ -275,6 +304,11 @@
         <!-- JavaScript will dynamically add falling text here -->
     </div>
 
+    <!-- Hacker Intrusion Simulation -->
+    <div class="hacker-intrusion">
+        <!-- JavaScript will dynamically add intrusion text here -->
+    </div>
+
     <nav class="navbar">
         <ul>
             <li><a href="#home">Home</a></li>
@@ -348,10 +382,11 @@
     <script>
         // JavaScript for Hacking Background
         const hackingBackground = document.querySelector('.hacking-background');
+        const cyberTerms = ["XSS", "SQLi", "SSRF", "SOC", "RCE", "CSRF", "LFI", "RFI", "CVE", "IDS", "IPS", "DDoS", "Zero-Day", "Phishing", "Malware", "Ransomware", "Firewall", "VPN", "Encryption", "Decryption"];
 
-        function createFallingText() {
+        function createFloatingText() {
             const text = document.createElement('span');
-            text.textContent = generateRandomText();
+            text.textContent = cyberTerms[Math.floor(Math.random() * cyberTerms.length)];
             text.style.left = Math.random() * 100 + 'vw';
             text.style.animationDuration = Math.random() * 5 + 3 + 's';
             hackingBackground.appendChild(text);
@@ -361,16 +396,32 @@
             }, 8000); // Remove text after animation ends
         }
 
-        function generateRandomText() {
-            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()';
-            let result = '';
-            for (let i = 0; i < 10; i++) {
-                result += characters.charAt(Math.floor(Math.random() * characters.length));
-            }
-            return result;
+        // JavaScript for Hacker Intrusion Simulation
+        const hackerIntrusion = document.querySelector('.hacker-intrusion');
+        const intrusionMessages = [
+            "HACKER DETECTED!",
+            "UNAUTHORIZED ACCESS BLOCKED!",
+            "THREAT NEUTRALIZED!",
+            "SECURITY BREACH PREVENTED!",
+            "FIREWALL ACTIVATED!",
+            "INTRUSION ATTEMPT FAILED!"
+        ];
+
+        function createIntrusionText() {
+            const text = document.createElement('div');
+            text.className = 'intrusion-text';
+            text.textContent = intrusionMessages[Math.floor(Math.random() * intrusionMessages.length)];
+            text.style.left = Math.random() * 80 + 'vw';
+            text.style.animationDuration = Math.random() * 3 + 2 + 's';
+            hackerIntrusion.appendChild(text);
+
+            setTimeout(() => {
+                text.remove();
+            }, 5000); // Remove text after animation ends
         }
 
-        setInterval(createFallingText, 500); // Add new text every 500ms
+        setInterval(createFloatingText, 500); // Add new text every 500ms
+        setInterval(createIntrusionText, 3000); // Add new intrusion text every 3 seconds
     </script>
 </body>
 </html>
