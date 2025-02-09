@@ -173,146 +173,204 @@
             100% { width: 0; }
         }
 
-        /* Card Grid with 3D
-cdnjs.cloudflare.com
-You sent
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- ... (keep existing head content) ... -->
-    <style>
-        /* Add to existing styles */
-        .cyber-particle {
-            position: fixed;
+        /* Card Grid with 3D Hover Effect */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: var(--glow);
+            border-color: var(--primary-color);
+        }
+
+        /* Certifications Section with Badges */
+        .cert-badge {
+            display: inline-block;
+            background: var(--highlight);
             color: var(--primary-color);
-            font-family: 'Courier New', monospace;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            margin: 0.5rem 0;
             font-size: 0.9rem;
-            opacity: 0.4;
-            pointer-events: none;
-            z-index: -1;
-            transition: all 0.3s ease;
+            box-shadow: var(--glow);
+        }
+
+        /* Footer with Gradient Background */
+        footer {
+            background: linear-gradient(135deg, var(--card-bg), var(--bg-color));
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .social-links a {
+            font-size: 1.5rem;
+            color: var(--text-color);
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-color);
+            text-shadow: var(--glow);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .navbar ul {
+                gap: 1rem;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 6rem 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div id="cyber-particles"></div>
-    <!-- ... (rest of existing body) ... -->
+    <!-- Hacking Background -->
+    <div class="hacking-background">
+        <!-- JavaScript will dynamically add falling text here -->
+    </div>
 
-    <!-- Add Experience Section -->
-    <section id="experience">
-        <h2 class="section-title">Cyber Operations</h2>
-        <div class="card-grid" id="experience-grid"></div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certs</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        <h1>SAHID</h1>
+        <p>TOP 1% CYBERSECURITY RESEARCHER • GOOGLE CYBERSECURITY SPECIALIST • BUG BOUNTY LEADER</p>
+        <button class="cta-button">Hire Me</button>
     </section>
 
+    <section id="skills">
+        <h2 class="section-title">Core Expertise</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3><i class="fas fa-shield-alt"></i> Threat Intelligence</h3>
+                <p>Advanced persistent threat detection and analysis with 99.8% accuracy rate</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-bug"></i> Ethical Hacking</h3>
+                <p>500+ critical vulnerabilities discovered in enterprise systems</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-cloud"></i> Cloud Security</h3>
+                <p>Multi-cloud security architecture design & implementation</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <h2 class="section-title">Certifications</h2>
+        <div class="card-grid">
+            <div class="card">
+                <div class="cert-badge">Google</div>
+                <h3>Cybersecurity Professional</h3>
+                <p>Advanced threat detection and SOC operations</p>
+            </div>
+            <div class="card">
+                <div class="cert-badge">FreeCodeCamp</div>
+                <h3>Security Engineering</h3>
+                <p>Full stack security implementation</p>
+            </div>
+            <div class="card">
+                <div class="cert-badge">Cisco</div>
+                <h3>CyberOps Associate</h3>
+                <p>Network security monitoring</p>
+            </div>
+            <div class="card">
+                <div class="cert-badge">IBM</div>
+                <h3>Cybersecurity Analyst</h3>
+                <p>Enterprise security solutions</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="social-links">
+            <a href="mailto:sahid@cyber.pro"><i class="fas fa-envelope"></i></a>
+            <a href="https://linkedin.com/in/sahid"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/sahid"><i class="fab fa-github"></i></a>
+            <a href="https://hackerone.com/sahid"><i class="fas fa-bug"></i></a>
+        </div>
+        <p>© 2025 SAHID - LEADING CYBER DEFENSE INNOVATION</p>
+    </footer>
+
     <script>
-        // Configuration Object (Easy to Update)
-        const config = {
-            profile: {
-                name: "SAHID",
-                role: "TOP 1% CYBERSECURITY RESEARCHER",
-                certifications: [
-                    { issuer: "Google", title: "Cybersecurity Professional" },
-                    { issuer: "Cisco", title: "CyberOps Associate" },
-                    // Add more here
-                ],
-                experience: [
-                    {
-                        title: "Lead Security Researcher",
-                        company: "ZeroDay Inc",
-                        duration: "2022-Present",
-                        details: [
-                            "Led red team operations for Fortune 500 companies",
-                            "Discovered 15+ critical CVEs in enterprise software"
-                        ]
-                    }
-                    // Add more here
-                ]
-            },
-            backgroundTerms: [
-                "XSS", "SQLi", "CSRF", "SSRF", "RCE", 
-                "C2", "SOC", "IDS", "APT", "MITM",
-                "OWASP", "NIST", "GDPR", "PKI", "VPN",
-                "Zero-Day", "Phishing", "Malware", "Botnet",
-                "Firewall", "SIEM", "EDR", "Honeypot"
-            ]
-        };
+        // JavaScript for Hacking Background
+        const hackingBackground = document.querySelector('.hacking-background');
 
-        // Dynamic Content Loading
-        document.addEventListener('DOMContentLoaded', () => {
-            // Load Experience
-            const experienceGrid = document.getElementById('experience-grid');
-            config.profile.experience.forEach(exp => {
-                experienceGrid.innerHTML += `
-                    <div class="card">
-                        <h3>${exp.title}</h3>
-                        <p class="company">${exp.company} • ${exp.duration}</p>
-                        <ul>${exp.details.map(d => <li>${d}</li>).join('')}</ul>
-                    </div>
-                `;
-            });
-        });
+        function createFallingText() {
+            const text = document.createElement('span');
+            text.textContent = generateRandomText();
+            text.style.left = Math.random() * 100 + 'vw';
+            text.style.animationDuration = Math.random() * 5 + 3 + 's';
+            hackingBackground.appendChild(text);
 
-        // Enhanced Cyber Background with Mouse Interaction
-        class CyberParticle {
-            constructor() {
-                this.element = document.createElement('div');
-                this.element.className = 'cyber-particle';
-                this.element.textContent = config.backgroundTerms[
-                    Math.floor(Math.random() * config.backgroundTerms.length)
-                ];
-                
-                this.x = Math.random() * window.innerWidth;
-                this.y = Math.random() * window.innerHeight;
-                this.vx = (Math.random() - 0.5) * 0.5;
-                this.vy = (Math.random() - 0.5) * 0.5;
-                
-                document.getElementById('cyber-particles').appendChild(this.element);
+            setTimeout(() => {
+                text.remove();
+            }, 8000); // Remove text after animation ends
+        }
+
+        function generateRandomText() {
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()';
+            let result = '';
+            for (let i = 0; i < 10; i++) {
+                result += characters.charAt(Math.floor(Math.random() * characters.length));
             }
-
-            update(mouse) {
-                // Mouse interaction
-                const dx = this.x - mouse.x;
-                const dy = this.y - mouse.y;
-                const distance = Math.sqrt(dx * dx + dy * dy);
-                
-                if (distance < 100) {
-                    const force = (100 - distance) / 50;
-                    this.vx += (dx / distance) * force;
-                    this.vy += (dy / distance) * force;
-                }
-
-                this.x += this.vx;
-                this.y += this.vy;
-                
-                // Boundary checks
-                if (this.x < 0 || this.x > window.innerWidth) this.vx *= -1;
-                if (this.y < 0 || this.y > window.innerHeight) this.vy *= -1;
-
-                this.element.style.transform = translate(${this.x}px, ${this.y}px);
-            }
+            return result;
         }
 
-        // Particle System
-        const particles = [];
-        const mouse = { x: 0, y: 0 };
-        
-        // Create particles
-        for (let i = 0; i < 100; i++) {
-            particles.push(new CyberParticle());
-        }
-
-        // Mouse movement listener
-        document.addEventListener('mousemove', (e) => {
-            mouse.x = e.clientX;
-            mouse.y = e.clientY;
-        });
-
-        // Animation loop
-        function animate() {
-            particles.forEach(particle => particle.update(mouse));
-            requestAnimationFrame(animate);
-        }
-        animate();
+        setInterval(createFallingText, 500); // Add new text every 500ms
     </script>
 </body>
 </html>
