@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sahid Rahman | Portfolio</title>
+    <title>Your Name | Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --bg-color: #121212;
-            --primary-color: #FF9800;
-            --accent-color: #FF5722;
-            --text-color: #E0E0E0;
-            --card-bg: #1E1E1E;
-            --border-color: #333;
-            --hover-bg: #252525;
-            --highlight: rgba(255, 152, 0, 0.2);
+            --bg-color: #0A192F;
+            --primary-color: #64FFDA;
+            --accent-color: #FF6B6B;
+            --text-color: #CCD6F6;
+            --card-bg: #112240;
+            --border-color: #233554;
+            --hover-bg: #1F4068;
+            --highlight: rgba(100,255,218,0.1);
         }
 
         body {
@@ -60,6 +60,25 @@
 
         .hero p {
             font-size: 1.3rem;
+        }
+
+        .resume-button {
+            margin-top: 1.5rem;
+        }
+
+        .resume-button a {
+            background: var(--primary-color);
+            color: var(--bg-color);
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .resume-button a:hover {
+            background: var(--accent-color);
+            color: #fff;
         }
 
         .section-title {
@@ -112,56 +131,32 @@
     <nav class="navbar">
         <a href="#home">Home</a>
         <a href="#skills">Skills</a>
-        <a href="#certifications">Certifications</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
     </nav>
 
     <section class="hero" id="home">
-        <h1>SAHID RAHMAN</h1>
-        <p>CYBERSECURITY ANALYST • SOC ANALYST • PENETRATION TESTER • BUG BOUNTY HUNTER</p>
-    </section>
-
-    <section id="skills">
-        <h2 class="section-title">Core Expertise</h2>
-        <div class="card-grid">
-            <div class="card">
-                <h3><i class="fas fa-shield-alt"></i> Threat Intelligence</h3>
-                <p>Advanced persistent threat detection and analysis</p>
-            </div>
-            <div class="card">
-                <h3><i class="fas fa-bug"></i> Ethical Hacking</h3>
-                <p>Vulnerability assessment and penetration testing</p>
-            </div>
-            <div class="card">
-                <h3><i class="fas fa-cloud"></i> Cloud Security</h3>
-                <p>Multi-cloud security architecture and implementation</p>
-            </div>
+        <h1>Your Name</h1>
+        <p>Cloud Engineer • Frontend Developer • SEO Specialist</p>
+        <div class="resume-button">
+            <a href="your_resume.pdf" download>Download Resume</a>
         </div>
     </section>
 
-    <section id="certifications">
-        <h2 class="section-title">Certifications</h2>
+    <section id="skills">
+        <h2 class="section-title">Skills</h2>
         <div class="card-grid">
             <div class="card">
-                <div class="cert-badge">Google</div>
-                <h3>Cybersecurity Professional</h3>
-                <p>Advanced threat detection and SOC operations</p>
+                <h3><i class="fas fa-cloud"></i> Cloud Computing</h3>
+                <p>AWS, Azure, GCP</p>
             </div>
             <div class="card">
-                <div class="cert-badge">FreeCodeCamp</div>
-                <h3>Security Engineering</h3>
-                <p>Full stack security implementation</p>
+                <h3><i class="fas fa-code"></i> Web Development</h3>
+                <p>React, Next.js, JavaScript, Tailwind</p>
             </div>
             <div class="card">
-                <div class="cert-badge">Cisco</div>
-                <h3>CyberOps Associate</h3>
-                <p>Network security monitoring</p>
-            </div>
-            <div class="card">
-                <div class="cert-badge">IBM</div>
-                <h3>Cybersecurity Analyst</h3>
-                <p>Enterprise security solutions</p>
+                <h3><i class="fas fa-search"></i> SEO Optimization</h3>
+                <p>Google Ranking, Keywords, Analytics</p>
             </div>
         </div>
     </section>
@@ -169,12 +164,10 @@
     <footer id="contact">
         <h2 class="section-title">Get in Touch</h2>
         <div class="social-links">
-            <a href="mailto:sahid@cyber.pro"><i class="fas fa-envelope"></i></a>
-            <a href="https://linkedin.com/in/sahid"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/sahid-rahaman"><i class="fab fa-github"></i></a>
-            <a href="https://hackerone.com/sahid"><i class="fas fa-bug"></i></a>
+            <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://linkedin.com/in/yourprofile"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/yourgithub"><i class="fab fa-github"></i></a>
         </div>
-        <p>© 2025 SAHID - LEADING CYBER DEFENSE INNOVATION</p>
     </footer>
 </body>
 </html>
