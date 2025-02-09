@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shahid | Cybersecurity Specialist</title>
+    <title>Sahid | Cybersecurity Specialist</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         /* Custom Color Palette */
         :root {
             --bg-color: #121212; /* Dark Background */
-            --primary-color: #1ab54c; /* Subtle Green */
+            --primary-color: #1db954; /* Green Accent */
             --accent-color: #00bcd4; /* Cyan Accent */
             --highlight-color: #ff4081; /* Pink for highlights */
-            --text-color: #f4f4f4; /* Light Text */
+            --text-color: #e0e0e0; /* Light Text */
             --light-background: #1d1d1d; /* Light Background for cards */
             --border-color: #444444; /* Subtle borders */
             --hover-bg: #333333; /* Hover background */
@@ -23,6 +23,7 @@
             color: var(--text-color);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
+            padding: 0;
         }
 
         a {
@@ -39,6 +40,7 @@
             padding: 1rem;
             position: sticky;
             top: 0;
+            z-index: 1000;
         }
 
         .navbar ul {
@@ -62,7 +64,7 @@
 
         .hero {
             text-align: center;
-            padding: 5rem 2rem;
+            padding: 6rem 2rem;
             background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('hacker-background.jpg');
             background-size: cover;
             color: var(--text-color);
@@ -81,7 +83,7 @@
 
         .skills-container, .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
             padding: 2rem;
         }
@@ -142,6 +144,18 @@
             .navbar ul {
                 flex-direction: column;
             }
+
+            .hero {
+                padding: 4rem 2rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .skills-container, .projects-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -159,8 +173,8 @@
     </nav>
 
     <section class="hero" id="home">
-        <h1>Shahid</h1>
-        <p>Cybersecurity Specialist | Penetration Tester | SOC Analyst | Bug Bounty Hunter</p>
+        <h1>Sahid</h1>
+        <p>Top 1% Cybersecurity Researcher | Penetration Tester | SOC Analyst | Bug Bounty Hunter</p>
     </section>
 
     <section id="skills">
@@ -168,15 +182,15 @@
         <div class="skills-container">
             <div class="card">
                 <h3><i class="fas fa-shield-alt"></i> Cybersecurity Analyst</h3>
-                <p>Strong expertise in threat analysis, vulnerability assessments, and incident response management. Skilled in identifying weaknesses and improving system security.</p>
+                <p>Experienced in threat analysis, vulnerability assessments, and managing incidents.</p>
             </div>
             <div class="card">
                 <h3><i class="fas fa-bug"></i> Penetration Tester</h3>
-                <p>Experienced in conducting security audits, ethical hacking, and penetration testing on web applications, networks, and systems.</p>
+                <p>Expert in ethical hacking, penetration testing on web applications and networks.</p>
             </div>
             <div class="card">
                 <h3><i class="fas fa-network-wired"></i> SOC Analyst</h3>
-                <p>Proficient in Security Operations Center (SOC) tasks including monitoring, triaging incidents, and analyzing security logs to detect and respond to threats in real time.</p>
+                <p>Skilled in monitoring, analyzing, and responding to security threats in real-time.</p>
             </div>
         </div>
     </section>
@@ -185,8 +199,8 @@
         <h2 class="section-title">Experience</h2>
         <div class="blog-card">
             <h3>Bug Bounty Hunter - 1.5 Years</h3>
-            <p>I've spent over 1.5 years participating in bug bounty programs, identifying critical vulnerabilities in live applications. Platforms like HackerOne and Bugcrowd have been key in honing my skills.</p>
-            <a href="https://yourbugbountydetailslink.com" target="_blank">Read more about my Bug Bounty journey</a>
+            <p>Participated in multiple bug bounty programs, finding critical vulnerabilities in live applications.</p>
+            <a href="https://yourbugbountydetailslink.com" target="_blank">Read my Bug Bounty journey</a>
         </div>
     </section>
 
@@ -195,11 +209,11 @@
         <div class="projects-grid">
             <div class="card">
                 <h3>Network Security Enhancement</h3>
-                <p>Led a project that enhanced the network security of a client by implementing robust security measures such as firewalls, encryption, and intrusion detection systems (IDS).</p>
+                <p>Improved network security for a client by implementing firewalls and IDS/IPS systems.</p>
             </div>
             <div class="card">
                 <h3>Web Application Penetration Testing</h3>
-                <p>Conducted a comprehensive penetration test on a web application, discovering vulnerabilities and providing detailed remediation strategies.</p>
+                <p>Tested a web application, discovering vulnerabilities and recommending solutions.</p>
             </div>
         </div>
     </section>
@@ -209,11 +223,19 @@
         <div class="projects-grid">
             <div class="card">
                 <h3>Google Cybersecurity Professional Certificate</h3>
-                <p>Completed the Google Cybersecurity Professional Certificate, acquiring foundational knowledge in security analysis, network security, and incident response.</p>
+                <p>Completed the Google Cybersecurity Professional Certificate, covering essential security fundamentals.</p>
             </div>
             <div class="card">
                 <h3>CompTIA Security+</h3>
-                <p>Earned the CompTIA Security+ certification, solidifying my knowledge in cybersecurity fundamentals, including network security and threat management.</p>
+                <p>Obtained CompTIA Security+, which validates foundational cybersecurity knowledge.</p>
+            </div>
+            <div class="card">
+                <h3>AWS Certified Security Specialty</h3>
+                <p>Focused on securing AWS environments and managing cloud infrastructure security.</p>
+            </div>
+            <div class="card">
+                <h3>Cisco CyberOps Associate</h3>
+                <p>Learned to work within Security Operations Centers (SOCs) to protect organizational infrastructures.</p>
             </div>
         </div>
     </section>
@@ -221,11 +243,11 @@
     <footer id="contact">
         <h3>Connect with Me</h3>
         <p>
-            <a href="mailto:shahid@cybersec.com"><i class="fas fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/shahid"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/shahid"><i class="fab fa-github"></i></a>
+            <a href="mailto:sahid@cybersec.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/sahid"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/sahid"><i class="fab fa-github"></i></a>
         </p>
-        <p>© 2025 Shahid. All rights reserved.</p>
+        <p>© 2025 Sahid. All rights reserved.</p>
     </footer>
 
 </body>
