@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sahid | Top 1% Cybersecurity Expert</title>
+    <title>Sahid | World's Top 1% Cybersecurity Expert</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* 2025 Color Palette */
+        /* 2025 Ultra-Modern Color Palette */
         :root {
-            --bg-color: #0A192F; /* Navy Blue */
+            --bg-color: #0A192F; /* Deep Navy */
             --primary-color: #64FFDA; /* Cyber Teal */
             --accent-color: #FF6B6B; /* Coral Red */
             --text-color: #CCD6F6; /* Soft White */
@@ -16,6 +16,12 @@
             --border-color: #233554; /* Medium Navy */
             --hover-bg: #1F4068; /* Hover Blue */
             --highlight: rgba(100,255,218,0.1); /* Teal Highlight */
+            --glow: 0 0 20px rgba(100,255,218,0.5); /* Neon Glow */
+        }
+
+        /* Smooth Scroll and Global Styles */
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -24,15 +30,18 @@
             font-family: 'Inter', 'Segoe UI', sans-serif;
             line-height: 1.6;
             margin: 0;
+            overflow-x: hidden;
         }
 
+        /* Navbar with Glass Morphism */
         .navbar {
-            background: var(--card-bg);
+            background: rgba(17, 34, 64, 0.8); /* Semi-transparent */
             padding: 1rem;
             position: sticky;
             top: 0;
             backdrop-filter: blur(10px);
             z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
         }
 
         .navbar ul {
@@ -50,23 +59,46 @@
             padding: 0.5rem 1rem;
             border-radius: 4px;
             transition: all 0.3s ease;
+            font-weight: 500;
         }
 
         .navbar a:hover {
             background: var(--highlight);
             color: var(--primary-color);
+            box-shadow: var(--glow);
         }
 
+        /* Hero Section with Animated Gradient */
         .hero {
             text-align: center;
-            padding: 8rem 2rem;
-            background: linear-gradient(45deg, var(--bg-color) 30%, var(--hover-bg));
+            padding: 10rem 2rem;
+            background: linear-gradient(135deg, var(--bg-color) 30%, var(--hover-bg));
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(100,255,218,0.1) 10%, transparent 50%);
+            animation: rotate 20s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 4rem;
             color: var(--primary-color);
             margin-bottom: 1rem;
+            text-shadow: var(--glow);
         }
 
         .hero p {
@@ -76,6 +108,24 @@
             color: var(--text-color);
         }
 
+        .hero .cta-button {
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            background: var(--primary-color);
+            color: var(--bg-color);
+            border: none;
+            border-radius: 4px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .hero .cta-button:hover {
+            background: var(--accent-color);
+            box-shadow: var(--glow);
+        }
+
+        /* Section Titles with Animated Underline */
         .section-title {
             text-align: center;
             color: var(--primary-color);
@@ -91,8 +141,16 @@
             background: var(--primary-color);
             display: block;
             margin: 0.5rem auto;
+            animation: underline 2s infinite;
         }
 
+        @keyframes underline {
+            0% { width: 0; }
+            50% { width: 60px; }
+            100% { width: 0; }
+        }
+
+        /* Card Grid with 3D Hover Effect */
         .card-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -108,14 +166,29 @@
             border-radius: 8px;
             border: 1px solid var(--border-color);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(100,255,218,0.1) 10%, transparent 50%);
+            animation: rotate 20s linear infinite;
+            z-index: -1;
         }
 
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.3);
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: var(--glow);
             border-color: var(--primary-color);
         }
 
+        /* Certifications Section with Badges */
         .cert-badge {
             display: inline-block;
             background: var(--highlight);
@@ -124,13 +197,16 @@
             border-radius: 20px;
             margin: 0.5rem 0;
             font-size: 0.9rem;
+            box-shadow: var(--glow);
         }
 
+        /* Footer with Gradient Background */
         footer {
-            background: var(--card-bg);
+            background: linear-gradient(135deg, var(--card-bg), var(--bg-color));
             text-align: center;
             padding: 3rem 2rem;
             margin-top: 4rem;
+            border-top: 1px solid var(--border-color);
         }
 
         .social-links {
@@ -148,8 +224,10 @@
 
         .social-links a:hover {
             color: var(--primary-color);
+            text-shadow: var(--glow);
         }
 
+        /* Responsive Design */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
@@ -171,7 +249,7 @@
 
         @media (max-width: 480px) {
             .hero {
-                padding: 4rem 1rem;
+                padding: 6rem 1rem;
             }
 
             .section-title {
@@ -194,6 +272,7 @@
     <section class="hero" id="home">
         <h1>SAHID</h1>
         <p>TOP 1% CYBERSECURITY RESEARCHER • GOOGLE CYBERSECURITY SPECIALIST • BUG BOUNTY LEADER</p>
+        <button class="cta-button">Hire Me</button>
     </section>
 
     <section id="skills">
