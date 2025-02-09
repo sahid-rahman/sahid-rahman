@@ -13,6 +13,8 @@
             --primary-color: #64FFDA;
             --accent-color: #FF6B6B;
             --text-color: #CCD6F6;
+            --card-bg: #112240;
+            --border-color: #233554;
         }
 
         body {
@@ -21,6 +23,39 @@
             font-family: 'Inter', 'Segoe UI', sans-serif;
             margin: 0;
             overflow-x: hidden;
+        }
+
+        .navbar {
+            background: rgba(17, 34, 64, 0.8);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .navbar ul {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex-wrap: wrap;
+        }
+
+        .navbar a {
+            color: var(--text-color);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .navbar a:hover {
+            background: rgba(100,255,218,0.1);
+            color: var(--primary-color);
         }
 
         .hero {
@@ -56,6 +91,30 @@
             background: var(--accent-color);
         }
 
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 0 20px rgba(100,255,218,0.5);
+        }
+
         .social-links {
             display: flex;
             justify-content: center;
@@ -75,10 +134,38 @@
 </head>
 <body>
     <div id="background-effect"></div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
     <section class="hero" id="home">
         <h1>SAHID</h1>
         <p>TOP 1% CYBERSECURITY RESEARCHER • GOOGLE CYBERSECURITY SPECIALIST • BUG BOUNTY LEADER</p>
         <button class="cta-button">Download Resume</button>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">Core Expertise</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3><i class="fas fa-shield-alt"></i> Threat Intelligence</h3>
+                <p>Advanced persistent threat detection and analysis with 99.8% accuracy rate</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-bug"></i> Ethical Hacking</h3>
+                <p>500+ critical vulnerabilities discovered in enterprise systems</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-cloud"></i> Cloud Security</h3>
+                <p>Multi-cloud security architecture design & implementation</p>
+            </div>
+        </div>
     </section>
 
     <div class="social-links">
