@@ -6,129 +6,204 @@
     <title>Sahid | Cybersecurity Expert</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Updated 2026 Cyberpunk Color Scheme */
+        /* 2025 Ultra-Modern Color Palette */
         :root {
-            --bg-color: #0A0F2B; /* Deep Space Blue */
-            --primary-color: #00FF9D; /* Neon Matrix Green */
-            --accent-color: #FF4655; /* Cyber Pink */
-            --text-color: #E0E0E0; /* Holographic White */
-            --card-bg: #161B33; /* Cyber Void */
-            --border-color: #2A2F4D; /* Neon Grid Line */
-            --hover-bg: #252A4D; /* Hover Pulse */
-            --highlight: rgba(0,255,157,0.15); /* Neon Highlight */
-            --glow: 0 0 25px rgba(0,255,157,0.4); /* Stronger Glow */
-            --cyber-gradient: linear-gradient(45deg, #00FF9D, #2B00FF);
+            --bg-color: #0A192F; /* Deep Navy */
+            --primary-color: #64FFDA; /* Cyber Teal */
+            --accent-color: #FF6B6B; /* Coral Red */
+            --text-color: #CCD6F6; /* Soft White */
+            --card-bg: #112240; /* Dark Navy */
+            --border-color: #233554; /* Medium Navy */
+            --hover-bg: #1F4068; /* Hover Blue */
+            --highlight: rgba(100,255,218,0.1); /* Teal Highlight */
+            --glow: 0 0 20px rgba(100,255,218,0.5); /* Neon Glow */
         }
 
-        /* Cyberpunk Glitch Effect */
-        @keyframes glitch {
-            0% { transform: translate(0); }
-            20% { transform: translate(-2px, 2px); }
-            40% { transform: translate(-2px, -2px); }
-            60% { transform: translate(2px, 2px); }
-            80% { transform: translate(2px, -2px); }
-            100% { transform: translate(0); }
+        /* Smooth Scroll and Global Styles */
+        html {
+            scroll-behavior: smooth;
         }
 
-        /* New Cyber Terminal Style */
-        .cyber-terminal {
-            border: 2px solid var(--primary-color);
-            border-radius: 8px;
-            padding: 1.5rem;
-            position: relative;
-            overflow: hidden;
-            background: var(--card-bg);
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            overflow-x: hidden;
         }
 
-        .cyber-terminal::before {
-            content: '';
-            position: absolute;
+        /* Hacking Background Animation */
+        .hacking-background {
+            position: fixed;
             top: 0;
-            left: -100%;
+            left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(
-                90deg,
-                transparent,
-                rgba(0,255,157,0.2),
-                transparent
-            );
-            animation: terminal-glow 3s infinite;
-        }
-
-        /* Experience Section Update */
-        .bounty-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            padding: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .stat-card {
-            background: var(--card-bg);
-            padding: 2rem;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary-color);
-            box-shadow: var(--glow);
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            font-weight: bold;
-            margin: 1rem 0;
-            text-shadow: var(--glow);
-        }
-
-        /* Write-up Section */
-        .writeup-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 2rem;
-            margin: 2rem auto;
-            max-width: 800px;
-            position: relative;
+            z-index: -1;
             overflow: hidden;
         }
 
-        .writeup-card::after {
+        .hacking-background::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            height: 3px;
-            background: var(--cyber-gradient);
+            height: 100%;
+            background: radial-gradient(circle, rgba(100,255,218,0.1) 10%, transparent 50%);
+            animation: rotate 20s linear infinite;
         }
 
-        /* Updated Hero Section */
+        .hacking-background span {
+            position: absolute;
+            color: var(--primary-color);
+            font-family: 'Courier New', monospace;
+            font-size: 1.2rem;
+            opacity: 0.7;
+            animation: fall linear infinite;
+            user-select: none;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100vh); }
+        }
+
+        /* Hacker Intrusion Simulation */
+        .hacker-intrusion {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .hacker-intrusion .intrusion-text {
+            position: absolute;
+            color: var(--accent-color);
+            font-family: 'Courier New', monospace;
+            font-size: 1.5rem;
+            opacity: 0;
+            animation: intrusion 5s linear infinite;
+        }
+
+        @keyframes intrusion {
+            0% { opacity: 0; transform: translateY(-100%); }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { opacity: 0; transform: translateY(100vh); }
+        }
+
+        /* Navbar with Glass Morphism */
+        .navbar {
+            background: rgba(17, 34, 64, 0.8); /* Semi-transparent */
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .navbar ul {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex-wrap: wrap;
+        }
+
+        .navbar a {
+            color: var(--text-color);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .navbar a:hover {
+            background: var(--highlight);
+            color: var(--primary-color);
+            box-shadow: var(--glow);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 10rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
         .hero h1 {
-            animation: glitch 2s infinite;
+            font-size: 4rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-shadow: var(--glow);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: var(--text-color);
+        }
+
+        .hero .cta-button {
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            background: var(--primary-color);
+            color: var(--bg-color);
+            border: none;
+            border-radius: 4px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .hero .cta-button:hover {
+            background: var(--accent-color);
+            box-shadow: var(--glow);
+        }
+
+        /* Section Titles with Animated Underline */
+        .section-title {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin: 4rem 0 2rem;
             position: relative;
         }
 
-        .hero h1::after {
-            content: 'CYBER_SENTINEL';
-            position: absolute;
-            left: 2px;
-            top: -2px;
-            color: var(--accent-color);
-            z-index: -1;
-            opacity: 0.8;
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 2px;
+            background: var(--primary-color);
+            display: block;
+            margin: 0.5rem auto;
+            animation: underline 2s infinite;
         }
 
-        /* New Grid Layout for Experience */
-        .cyber-grid {
+        @keyframes underline {
+            0% { width: 0; }
+            50% { width: 60px; }
+            100% { width: 0; }
+        }
+
+        /* Card Grid with 3D Hover Effect */
+        .card-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
@@ -137,157 +212,238 @@
             margin: 0 auto;
         }
 
-        /* Add these new animations */
-        @keyframes terminal-glow {
-            0% { left: -100%; }
-            100% { left: 200%; }
+        .card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
 
-        @keyframes hologram {
-            0% { transform: perspective(500px) rotateY(0deg); }
-            100% { transform: perspective(500px) rotateY(360deg); }
+        .card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: var(--glow);
+            border-color: var(--primary-color);
+        }
+
+        /* Avatar Images */
+        .card .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: block;
+            border: 2px solid var(--primary-color);
+            box-shadow: var(--glow);
+        }
+
+        .card .hacker-avatar {
+            background: url('https://img.icons8.com/color/96/000000/hacker.png') center/cover;
+        }
+
+        .card .defender-avatar {
+            background: url('https://img.icons8.com/color/96/000000/security-shield.png') center/cover;
+        }
+
+        /* Certifications Section with Badges */
+        .cert-badge {
+            display: inline-block;
+            background: var(--highlight);
+            color: var(--primary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+            box-shadow: var(--glow);
+        }
+
+        /* Footer with Gradient Background */
+        footer {
+            background: linear-gradient(135deg, var(--card-bg), var(--bg-color));
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .social-links a {
+            font-size: 1.5rem;
+            color: var(--text-color);
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-color);
+            text-shadow: var(--glow);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .navbar ul {
+                gap: 1rem;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 6rem 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Add to existing sections -->
+    <!-- Hacking Background -->
+    <div class="hacking-background">
+        <!-- JavaScript will dynamically add falling text here -->
+    </div>
 
-    <section id="experience">
-        <h2 class="section-title">Bug Bounty Triumphs</h2>
-        <div class="bounty-stats">
-            <div class="stat-card">
-                <i class="fas fa-bug fa-2x"></i>
-                <div class="stat-number">500+</div>
-                <p>Critical Vulnerabilities Found</p>
-            </div>
-            <div class="stat-card">
-                <i class="fas fa-trophy fa-2x"></i>
-                <div class="stat-number">$250k+</div>
-                <p>Total Bounty Earnings</p>
-            </div>
-            <div class="stat-card">
-                <i class="fas fa-shield-alt fa-2x"></i>
-                <div class="stat-number">150+</div>
-                <p>Secured Organizations</p>
-            </div>
-        </div>
+    <!-- Hacker Intrusion Simulation -->
+    <div class="hacker-intrusion">
+        <!-- JavaScript will dynamically add intrusion text here -->
+    </div>
 
-        <div class="cyber-grid">
-            <div class="cyber-terminal">
-                <h3>Top Exploits</h3>
-                <ul>
-                    <li>→ AWS IAM Privilege Escalation Chain</li>
-                    <li>→ Google Workspace SSRF → Cloud Takeover</li>
-                    <li>→ Microsoft Azure AD JWT Manipulation</li>
-                </ul>
-            </div>
-            
-            <div class="cyber-terminal">
-                <h3>Program Highlights</h3>
-                <ul>
-                    <li>★ Google VRP Hall of Fame (3x)</li>
-                    <li>★ Microsoft Bounty Leaderboard Top 50</li>
-                    <li>★ AWS Security Hero 2024</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certs</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    <section id="writeups">
-        <h2 class="section-title">Cyber Chronicles</h2>
-        <div class="writeup-card">
-            <h3>CSRF → XSS via Cart Manipulation</h3>
-            <p>Discover how I chained multiple vulnerabilities to achieve full account takeover 
-            in a Fortune 500 company's e-commerce platform...</p>
-            <a href="https://medium.com/@sahid-rahman/csrf-leading-to-xss-via-product-cart-manipulation-on-a-bug-bounty-program-6dcb5edbadb9" 
-               target="_blank"
-               class="cta-button"
-               style="display: inline-block; margin-top: 1rem;">
-               Read Full Analysis <i class="fas fa-external-link-alt"></i>
-            </a>
-        </div>
-    </section>
-
-    <!-- Updated Hero Section -->
     <section class="hero" id="home">
         <h1>SAHID RAHMAN</h1>
-        <p>CYBER SENTINEL • BUG BOUNTY OVERLORD • CLOUD SECURITY ARCHITECT</p>
-        <div class="badge-container" style="margin: 2rem 0;">
-            <span class="cert-badge" style="background: var(--accent-color);">HackerOne TOP 100</span>
-            <span class="cert-badge" style="background: #4285F4;">Google VRP Elite</span>
-            <span class="cert-badge" style="background: #FF6D00;">AWS Security Hero</span>
-        </div>
-        <button class="cta-button">Request Audit</button>
+        <p>TOP 1% CYBERSECURITY RESEARCHER • GOOGLE CYBERSECURITY SPECIALIST • BUG BOUNTY LEADER</p>
+        <button class="cta-button">Hire Me</button>
     </section>
 
-    <!-- Add this JavaScript for particle effect -->
+    <section id="skills">
+        <h2 class="section-title">Core Expertise</h2>
+        <div class="card-grid">
+            <div class="card">
+                <div class="avatar hacker-avatar"></div>
+                <h3><i class="fas fa-shield-alt"></i> Threat Intelligence</h3>
+                <p>Advanced persistent threat detection and analysis with 99.8% accuracy rate</p>
+            </div>
+            <div class="card">
+                <div class="avatar defender-avatar"></div>
+                <h3><i class="fas fa-bug"></i> Ethical Hacking</h3>
+                <p>500+ critical vulnerabilities discovered in enterprise systems</p>
+            </div>
+            <div class="card">
+                <div class="avatar hacker-avatar"></div>
+                <h3><i class="fas fa-cloud"></i> Cloud Security</h3>
+                <p>Multi-cloud security architecture design & implementation</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <h2 class="section-title">Certifications</h2>
+        <div class="card-grid">
+            <div class="card">
+                <div class="cert-badge">Google</div>
+                <h3>Cybersecurity Professional</h3>
+                <p>Advanced threat detection and SOC operations</p>
+            </div>
+            <div class="card">
+                <div class="cert-badge">FreeCodeCamp</div>
+                <h3>Security Engineering</h3>
+                <p>Full stack security implementation</p>
+            </div>
+            <div class="card">
+                <div class="cert-badge">Cisco</div>
+                <h3>CyberOps Associate</h3>
+                <p>Network security monitoring</p>
+            </div>
+            <div class="card">
+                <div class="cert-badge">IBM</div>
+                <h3>Cybersecurity Analyst</h3>
+                <p>Enterprise security solutions</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="social-links">
+            <a href="mailto:sahid@cyber.pro"><i class="fas fa-envelope"></i></a>
+            <a href="https://linkedin.com/in/sahid"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/sahid"><i class="fab fa-github"></i></a>
+            <a href="https://hackerone.com/sahid"><i class="fas fa-bug"></i></a>
+        </div>
+        <p>© 2025 SAHID - LEADING CYBER DEFENSE INNOVATION</p>
+    </footer>
+
     <script>
-        // Advanced Particle Animation
-        class CyberParticle {
-            constructor(canvas) {
-                this.canvas = canvas;
-                this.ctx = canvas.getContext('2d');
-                this.particles = [];
-                this.init();
-            }
+        // JavaScript for Hacking Background
+        const hackingBackground = document.querySelector('.hacking-background');
+        const cyberTerms = ["XSS", "SQLi", "SSRF", "SOC", "RCE", "CSRF", "LFI", "RFI", "CVE", "IDS", "IPS", "DDoS", "Zero-Day", "Phishing", "Malware", "Ransomware", "Firewall", "VPN", "Encryption", "Decryption"];
 
-            init() {
-                this.resize();
-                window.addEventListener('resize', () => this.resize());
-                this.animate();
-            }
+        function createFloatingText() {
+            const text = document.createElement('span');
+            text.textContent = cyberTerms[Math.floor(Math.random() * cyberTerms.length)];
+            text.style.left = Math.random() * 100 + 'vw';
+            text.style.animationDuration = Math.random() * 5 + 3 + 's';
+            hackingBackground.appendChild(text);
 
-            resize() {
-                this.canvas.width = window.innerWidth;
-                this.canvas.height = window.innerHeight;
-            }
-
-            createParticle() {
-                return {
-                    x: Math.random() * this.canvas.width,
-                    y: Math.random() * this.canvas.height,
-                    size: Math.random() * 2 + 1,
-                    speedX: (Math.random() - 0.5) * 0.5,
-                    speedY: (Math.random() - 0.5) * 0.5,
-                    color: `rgba(0,255,157,${Math.random() * 0.5})`
-                };
-            }
-
-            animate() {
-                this.ctx.fillStyle = 'rgba(10,15,43,0.05)';
-                this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
-
-                if(this.particles.length < 100) {
-                    this.particles.push(this.createParticle());
-                }
-
-                this.particles.forEach((particle, index) => {
-                    particle.x += particle.speedX;
-                    particle.y += particle.speedY;
-
-                    if(particle.x < 0 || particle.x > this.canvas.width ||
-                       particle.y < 0 || particle.y > this.canvas.height) {
-                        this.particles.splice(index, 1);
-                    }
-
-                    this.ctx.beginPath();
-                    this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-                    this.ctx.fillStyle = particle.color;
-                    this.ctx.fill();
-                });
-
-                requestAnimationFrame(() => this.animate());
-            }
+            setTimeout(() => {
+                text.remove();
+            }, 8000); // Remove text after animation ends
         }
 
-        // Initialize particle canvas
-        const canvas = document.createElement('canvas');
-        canvas.style.position = 'fixed';
-        canvas.style.top = '0';
-        canvas.style.left = '0';
-        canvas.style.zIndex = '-1';
-        document.body.appendChild(canvas);
-        new CyberParticle(canvas);
+        // JavaScript for Hacker Intrusion Simulation
+        const hackerIntrusion = document.querySelector('.hacker-intrusion');
+        const intrusionMessages = [
+            "HACKER DETECTED!",
+            "UNAUTHORIZED ACCESS BLOCKED!",
+            "THREAT NEUTRALIZED!",
+            "SECURITY BREACH PREVENTED!",
+            "FIREWALL ACTIVATED!",
+            "INTRUSION ATTEMPT FAILED!"
+        ];
+
+        function createIntrusionText() {
+            const text = document.createElement('div');
+            text.className = 'intrusion-text';
+            text.textContent = intrusionMessages[Math.floor(Math.random() * intrusionMessages.length)];
+            text.style.left = Math.random() * 80 + 'vw';
+            text.style.animationDuration = Math.random() * 3 + 2 + 's';
+            hackerIntrusion.appendChild(text);
+
+            setTimeout(() => {
+                text.remove();
+            }, 5000); // Remove text after animation ends
+        }
+
+        setInterval(createFloatingText, 500); // Add new text every 500ms
+        setInterval(createIntrusionText, 3000); // Add new intrusion text every 3 seconds
     </script>
 </body>
 </html>
