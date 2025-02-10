@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +9,24 @@
     <style>
         /* 2025 Ultra-Modern Color Palette */
         :root {
-            --bg-color: #0A192F; /* Deep Navy */
-            --primary-color: #64FFDA; /* Cyber Teal */
-            --accent-color: #FF6B6B; /* Coral Red */
-            --text-color: #CCD6F6; /* Soft White */
-            --card-bg: #112240; /* Dark Navy */
-            --border-color: #233554; /* Medium Navy */
-            --hover-bg: #1F4068; /* Hover Blue */
-            --highlight: rgba(100,255,218,0.1); /* Teal Highlight */
-            --glow: 0 0 20px rgba(100,255,218,0.5); /* Neon Glow */
+            --bg-color: #0A192F;
+            /* Deep Navy */
+            --primary-color: #64FFDA;
+            /* Cyber Teal */
+            --accent-color: #FF6B6B;
+            /* Coral Red */
+            --text-color: #CCD6F6;
+            /* Soft White */
+            --card-bg: #112240;
+            /* Dark Navy */
+            --border-color: #233554;
+            /* Medium Navy */
+            --hover-bg: #1F4068;
+            /* Hover Blue */
+            --highlight: rgba(100, 255, 218, 0.1);
+            /* Teal Highlight */
+            --glow: 0 0 20px rgba(100, 255, 218, 0.5);
+            /* Neon Glow */
         }
 
         /* Smooth Scroll and Global Styles */
@@ -31,6 +41,8 @@
             line-height: 1.6;
             margin: 0;
             overflow-x: hidden;
+            padding-bottom: 5rem;
+            /* Add padding at the bottom for the always-visible contact bar */
         }
 
         /* Hacking Background Animation */
@@ -51,7 +63,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle, rgba(100,255,218,0.1) 10%, transparent 50%);
+            background: radial-gradient(circle, rgba(100, 255, 218, 0.1) 10%, transparent 50%);
             animation: rotate 20s linear infinite;
         }
 
@@ -66,13 +78,23 @@
         }
 
         @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         @keyframes fall {
-            0% { transform: translateY(-100%); }
-            100% { transform: translateY(100vh); }
+            0% {
+                transform: translateY(-100%);
+            }
+
+            100% {
+                transform: translateY(100vh);
+            }
         }
 
         /* Hacker Intrusion Simulation */
@@ -97,15 +119,29 @@
         }
 
         @keyframes intrusion {
-            0% { opacity: 0; transform: translateY(-100%); }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { opacity: 0; transform: translateY(100vh); }
+            0% {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(100vh);
+            }
         }
 
         /* Navbar with Glass Morphism */
         .navbar {
-            background: rgba(17, 34, 64, 0.8); /* Semi-transparent */
+            background: rgba(17, 34, 64, 0.8);
+            /* Semi-transparent */
             padding: 1rem;
             position: sticky;
             top: 0;
@@ -197,9 +233,17 @@
         }
 
         @keyframes underline {
-            0% { width: 0; }
-            50% { width: 60px; }
-            100% { width: 0; }
+            0% {
+                width: 0;
+            }
+
+            50% {
+                width: 60px;
+            }
+
+            100% {
+                width: 0;
+            }
         }
 
         /* Card Grid with 3D Hover Effect */
@@ -286,6 +330,62 @@
             text-shadow: var(--glow);
         }
 
+        /* Resume Button */
+        .resume-button {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            background: var(--accent-color);
+            color: var(--bg-color);
+            border: none;
+            border-radius: 4px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            /* Remove underline */
+        }
+
+        .resume-button:hover {
+            background: var(--primary-color);
+            box-shadow: var(--glow);
+            color: var(--bg-color);
+        }
+
+        /* Always Visible Contact Bar */
+        .contact-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(17, 34, 64, 0.9);
+            /* Semi-transparent */
+            padding: 1rem;
+            text-align: center;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .contact-bar .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 0;
+            /* Reset margin */
+        }
+
+        .contact-bar .social-links a {
+            font-size: 1.5rem;
+            color: var(--text-color);
+            transition: color 0.3s ease;
+        }
+
+        .contact-bar .social-links a:hover {
+            color: var(--primary-color);
+            text-shadow: var(--glow);
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .hero h1 {
@@ -314,9 +414,68 @@
             .section-title {
                 font-size: 2rem;
             }
+
+            .contact-bar .social-links {
+                gap: 1rem;
+            }
+
+            .contact-bar .social-links a {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Experience Section */
+        #experience .card {
+            text-align: left;
+        }
+
+        #experience .card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        #experience .card p {
+            margin-bottom: 1rem;
+        }
+
+        #experience .card a {
+            color: var(--accent-color);
+            text-decoration: none;
+            /* Remove underline */
+            transition: color 0.3s ease;
+        }
+
+        #experience .card a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Project Section */
+        #projects .card {
+            text-align: left;
+        }
+
+        #projects .card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        #projects .card p {
+            margin-bottom: 1rem;
+        }
+
+        #projects .card a {
+            color: var(--accent-color);
+            text-decoration: none;
+            /* Remove underline */
+            transition: color 0.3s ease;
+        }
+
+        #projects .card a:hover {
+            color: var(--primary-color);
         }
     </style>
 </head>
+
 <body>
     <!-- Hacking Background -->
     <div class="hacking-background">
@@ -332,6 +491,7 @@
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#certifications">Certs</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -341,7 +501,7 @@
     <section class="hero" id="home">
         <h1>SAHID RAHMAN</h1>
         <p>Cybersecurity Enthusiast | SOC Analyst | Penetration Tester</p>
-        <button class="cta-button">Hire Me</button>
+        <a href="/path/to/your/resume.pdf" class="resume-button" download>Download Resume</a>
     </section>
 
     <section id="skills">
@@ -365,6 +525,29 @@
         </div>
     </section>
 
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2 class="section-title">Experience</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>Bug Bounty Write-Ups</h3>
+                <p>
+                    <a href="https://medium.com/@sahid-rahman/unauthorized-admin-panel-access-due-to-lack-of-rate-limiting-663cd9d896b9"
+                        target="_blank">Unauthorized Admin Panel Access Due to Lack of Rate Limiting</a>
+                </p>
+                <p>
+                    <a href="https://medium.com/@sahid-rahman/how-i-discovered-a-reflected-xss-rxss-vulnerability-in-a-product-filter-parameter-682d4a016fd6"
+                        target="_blank">How I Discovered a Reflected XSS (RXSS) Vulnerability in a Product Filter
+                        Parameter</a>
+                </p>
+                <p>
+                    <a href="https://medium.com/@sahid-rahman/csrf-leading-to-xss-via-product-cart-manipulation-on-a-bug-bounty-program-6dcb5edbadb9"
+                        target="_blank">CSRF Leading to XSS via Product Cart Manipulation on a Bug Bounty Program</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
     <section id="certifications">
         <h2 class="section-title">Certifications</h2>
         <div class="card-grid">
@@ -374,19 +557,21 @@
                 <p>Advanced threat detection and SOC operations</p>
             </div>
             <div class="card">
-                <div class="cert-badge">FreeCodeCamp</div>
-                <h3>Security Engineering</h3>
-                <p>Full stack security implementation</p>
+                <div class="cert-badge">APIsec University</div>
+                <h3>API Penetration Testing</h3>
+                <p>Fundamentals of API Security and Penetration Testing.</p>
             </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="card-grid">
             <div class="card">
-                <div class="cert-badge">Cisco</div>
-                <h3>CyberOps Associate</h3>
-                <p>Network security monitoring</p>
-            </div>
-            <div class="card">
-                <div class="cert-badge">IBM</div>
-                <h3>Cybersecurity Analyst</h3>
-                <p>Enterprise security solutions</p>
+                <h3>Automated AI-Powered Security Scanner</h3>
+                <p>Developed an automated security scanner using AI to identify vulnerabilities in web applications.
+                </p>
             </div>
         </div>
     </section>
@@ -400,6 +585,16 @@
         </div>
         <p>© 2025 SAHID - LEADING CYBER DEFENSE INNOVATION</p>
     </footer>
+
+    <!-- Always Visible Contact Bar -->
+    <div class="contact-bar">
+        <div class="social-links">
+            <a href="mailto:sahid@cyber.pro"><i class="fas fa-envelope"></i></a>
+            <a href="https://linkedin.com/in/sahid"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/sahid"><i class="fab fa-github"></i></a>
+            <a href="https://hackerone.com/sahid"><i class="fas fa-bug"></i></a>
+        </div>
+    </div>
 
     <script>
         // JavaScript for Hacking Background
@@ -446,4 +641,5 @@
         setInterval(createIntrusionText, 3000); // Add new intrusion text every 3 seconds
     </script>
 </body>
+
 </html>
