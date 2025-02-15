@@ -26,7 +26,7 @@ Welcome to my GitHub portfolio! I’m Sahid, a passionate learner and aspiring *
 - *Programming Languages*: Python, JavaScript, Bash  
 - *Web Development*: HTML, CSS, React.js, Node.js, Express.js  
 - *Cybersecurity*: XSS, SQL Injection, Burp Suite, Basic Penetration Testing  
-- *Cloud Basics*: [Mention any tools or services you’re currently learning, e.g., AWS, Azure, etc.]  
+ 
 - *Video Editing*: DaVinci Resolve  
 
 ---
@@ -35,7 +35,7 @@ Welcome to my GitHub portfolio! I’m Sahid, a passionate learner and aspiring *
 
 ### 🔒 Cybersecurity Projects
 - *Bug Bounty Work*: Found Couple of  valid  vulnerabilities like XSS and CSRF Injection bugs on HackerOne.  
-- *[Your SOC-related project, if any]*  
+
 
 
 ### 🎮 Content Creation
