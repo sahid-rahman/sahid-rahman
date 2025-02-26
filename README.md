@@ -24,7 +24,7 @@ Welcome to my GitHub portfolio! I’m Sahid, a passionate learner and aspiring *
 ## 🔧 Skills
 
 - *Programming Languages*: Python, JavaScript, Bash  
-- *Web Development*: HTML, CSS, React.js, Node.js, Express.js  
+- *Web Development*: HTML, 
 - *Cybersecurity*: XSS, SQL Injection, Burp Suite, Basic Penetration Testing  
  
 - *Video Editing*: DaVinci Resolve  
@@ -47,9 +47,8 @@ Welcome to my GitHub portfolio! I’m Sahid, a passionate learner and aspiring *
 ## 📞 Contact Me
 
 - *Email*: [sahidrahmanx@gmail.com]  
-- *LinkedIn*: [Your LinkedIn Profile]  
-- *GitHub*: [Your GitHub Profile Link]  
-- *Portfolio Website*: [Your Portfolio Link, if available]  
+- *LinkedIn : [https://www.linkedin.com/in/sahid-rahman]  
+- *Portfolio Website*: [https://sahid-rahman.github.io/sahid-rahman]  
 
 ---
 
